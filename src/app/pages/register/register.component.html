@@ -1,0 +1,101 @@
+<main class="register-page-container">
+  <div class="logo-mobile-container">
+    <span class="slogan-mobile">Únete ya al Dream Team de jugadores que se han ligado a nuestra plataforma</span>
+  </div>
+  <img alt="image" src="../../../assets/images/logoLogin.png" class="logo-login"/>
+  <p class="slogan">Únete ya al <strong>Dream Team</strong> de jugadores<br>que se han ligado a nuestra plataforma</p>
+  <form class="register-page-form" action="../homepage/homepage.html" (ngSubmit)="loginUser()">
+    <span class="register-text">REGÍSTRATE</span>
+    <div class="register-page-inputs">
+      <label>
+        <input
+          type="text"
+          placeholder="Nombre"
+          class="register-page-nameinput input"
+          name="nombre"
+          required
+        />
+      </label>
+      <label>
+        <input
+          type="text"
+          placeholder="Apellidos"
+          class="register-page-surnameinput input"
+          name="apellido"
+          required
+        />
+      </label>
+      <label>
+        <input
+          type="email"
+          placeholder="Correo electrónico"
+          class="register-page-mailinput input"
+          name="email"
+          id="email"
+          required
+        />
+      </label>
+      <label>
+        <input
+          type="password"
+          placeholder="Contraseña"
+          class="register-page-passwdinput input"
+          name="password"
+          id="password"
+          required
+        />
+      </label>
+      <div class="island_and_place">
+        <label>
+          Isla:
+          <select id="island" class="register-page-islandinput input" name="isla">
+            <option value="isla1">Gran Canaria</option>
+            <option value="isla2">Tenerife</option>
+            <option value="isla3">La Palma</option>
+            <option value="isla4">Fuerteventura</option>
+            <option value="isla5">El Hierro</option>
+            <option value="isla6">La Gomera</option>
+            <option value="isla7">Lanzarote</option>
+            <option value="isla8">La Graciosa</option>
+          </select>
+        </label>
+        <label>
+          Municipio:
+          <select id="municipality" class="register-page-placedinput input" name="municipio"></select>
+        </label>
+      </div>
+      <div class="height_and_position">
+        <label>
+          Altura (cm):
+          <input
+            type="number"
+            placeholder="Altura (cm)"
+            class="register-page-heightinput input"
+            id="height"
+            min="150"
+            max="230"
+            name="altura"
+            required
+          />
+        </label>
+        <label>
+          Posición:
+          <select id="position" class="register-page-positioninput input" name="posicion">
+            <option value="Base">Base</option>
+            <option value="Escolta">Escolta</option>
+            <option value="Alero">Alero</option>
+            <option value="Ala-Pívot">Ala-Pívot</option>
+            <option value="Pívot">Pívot</option>
+          </select>
+        </label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="terms-checkbox" class="terms-checkbox" required>
+        <label for="terms-checkbox" class="terms-label">He leído y acepto los <a href="../nosotros_terms/terms_and_conditions_page.html">términos y condiciones</a></label>
+      </div>
+      <input type="submit" class="register-button button" value="SIGN UP">
+      <span class="register-question">¿Tienes cuenta?</span>
+      <a href="login_page.html" class="register-page-navlink">Inicia sesión</a>
+    </div>
+  </form>
+</main>

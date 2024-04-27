@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Regístrate</title>
+  <link rel="stylesheet" href="sign-up.component.css">
+</head>
+<body>
+<main>
+  <form class="formulario">
+    <h1>REGÍSTRATE</h1>
+
+    <div class="formulario--casilla1">
+      <label for="usuario">Nombre de usuario:</label>
+      <input
+        type="text"
+        placeholder="Nombre de usuario"
+        class="register-page-nameinput input"
+        name="usuario"
+        id="usuario"
+        required
+      >
+    </div>
+
+    <div class="formulario--casilla1">
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        placeholder="Nombre"
+        class="register-page-nameinput input"
+        name="nombre"
+        id="nombre"
+        required
+      >
+    </div>
+
+    <div class="formulario--casilla1">
+      <label for="apellido">Apellidos:</label>
+      <input
+        type="text"
+        placeholder="Apellidos"
+        name="apellido"
+        id="apellido"
+        required
+      >
+    </div>
+
+    <div class="formulario--casilla1">
+    <label for="email">Correo electrónico:</label>
+    <input
+      type="email"
+      placeholder="Correo electrónico"
+      name="email"
+      id="email"
+      required
+    >
+    </div>
+
+    <div class="formulario--casilla1">
+    <label for="password">Contraseña:</label>
+    <input
+      type="password"
+      placeholder="Contraseña"
+      name="password"
+      id="password"
+      required
+    >
+    </div>
+
+    <div>
+      <input class="formulario--terminos" type="checkbox" id="terms-checkbox" required>
+      <label for="terms-checkbox" class="terms-label">He leído y acepto los <a href="#">términos y
+        condiciones</a></label>
+    </div>
+    <input class="formulario--submit" type="submit" id="submit" value="SIGN UP">
+    <span>¿Tienes cuenta?</span>
+    <a href="#">Inicia sesión</a>
+  </form>
+</main>
+</body>
+</html>

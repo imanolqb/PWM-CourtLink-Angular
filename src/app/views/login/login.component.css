@@ -9,7 +9,9 @@ main {
 }
 
 .section1 {
+  display: flex;
   flex: 1;
+  justify-content: center;
 }
 
 .section2 {
@@ -18,6 +20,13 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .formulario {
   display: flex;
   flex-direction: column;
@@ -54,6 +63,7 @@ main {
   border-radius: 5px;
   width: 100%;
   font-size: medium;
+  border: none;
 }
 
 .formulario--submit {

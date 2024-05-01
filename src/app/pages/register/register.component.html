@@ -48,7 +48,7 @@
       <div class="island_and_place">
         <label>
           Isla:
-          <select id="island" class="register-page-islandinput input" name="isla">
+          <select (change)="updateMunicipalities()" id="island" class="register-page-islandinput input" name="isla">
             <option value="isla1">Gran Canaria</option>
             <option value="isla2">Tenerife</option>
             <option value="isla3">La Palma</option>
@@ -91,7 +91,7 @@
       </div>
       <div class="checkbox-container">
         <input type="checkbox" id="terms-checkbox" class="terms-checkbox" required>
-        <label for="terms-checkbox" class="terms-label">He leído y acepto los <a href="../nosotros_terms/terms_and_conditions_page.html">términos y condiciones</a></label>
+        <label for="terms-checkbox" class="terms-label">He leído y acepto los <a routerLink="/">términos y condiciones</a></label>
       </div>
       <input type="submit" class="register-button button" value="SIGN UP">
       <span class="register-question">¿Tienes cuenta?</span>

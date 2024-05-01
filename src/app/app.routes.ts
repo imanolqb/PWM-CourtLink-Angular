@@ -6,6 +6,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { MvpsComponent } from './pages/mvps/mvps.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { CourtsDetailsComponent } from './pages/courts-details/courts-details.component';
+import { AddMatchesComponent } from './pages/add-matches/add-matches.component';
+import { AddCourtsComponent } from './pages/add-courts/add-courts.component';
 import {NgModule} from "@angular/core";
 
 export const routes: Routes = [
@@ -15,7 +18,10 @@ export const routes: Routes = [
   { path: 'canchas', component: CourtsComponent },
   { path: 'partidos', component: MatchesComponent },
   { path: 'mvps', component: MvpsComponent },
-  { path: 'nosotros', component: NosotrosComponent }
+  { path: 'nosotros', component: NosotrosComponent },
+  { path: 'court_details', component: CourtsDetailsComponent },
+  { path: 'add_match', component: AddMatchesComponent },
+  { path: 'add_courts', component: AddCourtsComponent }
 ];
 
 @NgModule({

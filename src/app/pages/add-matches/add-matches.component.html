@@ -1,0 +1,50 @@
+<main class="add-match-contenido">
+  <h1 class="title_add_match">AÑADIR PARTIDO</h1>
+  <form class="add-match-form">
+    <span class="add-match-message">¡Añade un partido y empieza a jugar ya!</span>
+    <div>
+      <label class="match-name">
+        Nombre del partido:
+        <input
+          type="text"
+          placeholder="Nombre del partido"
+          class="name-input input"
+          required
+        />
+      </label>
+    </div>
+    <div class="match-place">
+      <input type="hidden" id="selected-location" name="selected-location">
+      <div id="map"></div>
+    </div>
+    <div>
+      <label class="court-name">
+        Nombre de la cancha:
+        <input
+          type="text"
+          placeholder="Nombre de la cancha"
+          class="name-input input"
+          id="location-search"
+          required
+        />
+      </label>
+    </div>
+    <div class="match-datetime">
+      <label for="fecha">Fecha y Hora:</label>
+      <input type="datetime-local" id="fecha" name="fecha_hora" [min]="fechaActual" required>
+    </div>
+    <div class="match-modality">
+      <label>
+        Modalidad:
+        <select id="modalidad" class="modalidad-input input">
+          <option value="modalidad1">1 vs 1</option>
+          <option value="modalidad2">2 vs 2</option>
+          <option value="modalidad3">3 vs 3</option>
+          <option value="modalidad4">4 vs 4</option>
+          <option value="modalidad5">5 vs 5</option>
+        </select>
+      </label>
+    </div>
+    <input type="submit" class="add-match-button button" id="add-match-button" value="AÑADIR" (click)="volver()">
+  </form>
+</main>

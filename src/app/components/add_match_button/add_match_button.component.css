@@ -39,7 +39,7 @@
 #filter-button::after,
 #add-match-button::after {
   content: "";
-  background-image: url('../../assets/images/plus-vector.png');
+  background-image: url('../../../assets/images/plus-vector.png');
   background-size: cover; /* Ajusta el tamaño de la imagen */
   display: inline-block; /* Para que el pseudo-elemento tenga dimensiones */
   width: 20px; /* Ancho deseado de la imagen */
@@ -107,7 +107,7 @@ input[type="checkbox"] {
 }
 #filter-button::after {
   content: " ";
-  background-image: url('../../assets/images/filtro-vector.png');
+  background-image: url('../../../assets/images/filtro-vector.png');
   background-size: cover;
   display: inline-block;
   width: 20px;

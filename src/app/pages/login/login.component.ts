@@ -1,9 +1,7 @@
 import { Component } from '@angular/core'
 import { Title, Meta } from '@angular/platform-browser'
-import {HeaderComponent} from "../../header/header.component";
-import {FooterComponent} from "../../footer/footer.component";
-import {Add_match_buttonComponent} from "../../add_match_button/add_match_button.component";
-import {Filter_buttonComponent} from "../../filter_button/filter_button.component";
+import {HeaderComponent} from "../../components/header/header.component";
+import {FooterComponent} from "../../components/footer/footer.component";
 import {RouterLink} from "@angular/router";
 import {NgOptimizedImage} from "@angular/common";
 

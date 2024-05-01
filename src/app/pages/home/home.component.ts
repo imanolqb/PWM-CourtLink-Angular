@@ -1,8 +1,8 @@
 import { Component } from '@angular/core'
 import { Title, Meta } from '@angular/platform-browser'
-import {HeaderComponent} from "../../header/header.component";
-import {FooterComponent} from "../../footer/footer.component";
-import {HomepageComponent} from "../../homepage/homepage.component";
+import {HeaderComponent} from "../../components/header/header.component";
+import {FooterComponent} from "../../components/footer/footer.component";
+import {HomepageComponent} from "../../components/homepage/homepage.component";
 
 @Component({
   selector: 'app-home',

@@ -1,18 +1,19 @@
 import { Component } from '@angular/core'
 import { Title, Meta } from '@angular/platform-browser'
-import {HeaderComponent} from "../../header/header.component";
-import {FooterComponent} from "../../footer/footer.component";
-import {RouterLink} from "@angular/router";
+import {HeaderComponent} from "../../components/header/header.component";
+import {FooterComponent} from "../../components/footer/footer.component";
+import {Router, RouterLink} from "@angular/router";
+import {MapComponent} from "../../components/map/map.component";
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-courts',
   templateUrl: 'courts.component.html',
   styleUrls: ['courts.component.css'],
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, RouterLink]
+  imports: [HeaderComponent, FooterComponent, RouterLink, MapComponent]
 })
 export class CourtsComponent {
-  constructor(private title: Title, private meta: Meta) {
+  constructor(private title: Title, private meta: Meta, private router: Router) {
     this.title.setTitle('CourtLink Basketball: Canchas')
     this.meta.addTags([
       {
@@ -20,5 +21,9 @@ export class CourtsComponent {
         content: 'CourtLink Basketball',
       },
     ])
+  }
+
+  irAPaginaDeAnadirCancha() {
+    this.router.navigate(['/add_courts']);
   }
 }

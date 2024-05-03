@@ -1,0 +1,394 @@
+/* Estilos para el encabezado */
+.header {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  background-image: url('https://images.unsplash.com/photo-1587960184060-aa880aabdd04?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE0fHxiYXNrZXRiYWxsfGVufDB8fHx8MTcwODM4MzE4NHww&ixlib=rb-4.0.3&w=1600');
+}
+
+/* Estilos para el logo */
+.header_logo {
+  flex-grow: 1;
+  text-align: left;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* Estilos para el nav */
+.navbar {
+  flex-grow: 1;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  box-sizing: border-box; /* Incluir el padding en el ancho total */
+  color: #FF7C00;
+  text-decoration: none;
+  font-size: 17px;
+  width: 19%; /* Four links of equal widths */
+  height: 100%;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Alinea los elementos de la lista horizontalmente */
+  flex-basis: auto;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.navbar a:hover {
+  background-color: #FF7C00;
+  color: white;
+}
+
+.navbar a.active {
+  background-color: #FF7C00;
+}
+
+.header_nav_button {
+  background-color: white;
+  cursor: pointer;
+  color: #FF7C00;
+  border: 3px solid #FF7C00; /* Definir el grosor y color del borde */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  height: 100%; /* Ocupar todo el alto del contenedor */
+  line-height: 40px; /* Alinear verticalmente el texto */
+  flex-basis: 20%; /* Ancho igual para todos los elementos */
+}
+
+.header_nav_button:hover {
+  background-color: #FF7C00;
+  color: white;
+  border: 3px solid #FF7C00;
+  border-radius: 5px;
+}
+
+/* Estilos para el botón de inicio de sesión y el botón de cuenta*/
+.header_profile_button,
+.header_login_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  background-color: #FF7C00;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: 8px 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Estilos para el botón de cuenta y foto de perfil */
+.header_profile_button::after {
+  font-family: sans-serif;
+  content: "▼";
+  padding-left: 0.5em;
+}
+
+.header_profile_button::before {
+  content: "";
+  background-image: url('../../../assets/images/user-icon.jpg');
+  background-size: cover;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+
+ul {
+  list-style: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0.5em;
+}
+
+.profile-options {
+  box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.3);
+  padding: 1.5em;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #FF7C00;
+  background-color: #ffffff;
+  top: 163px;
+  left: 1333px;
+  z-index: 1000;
+}
+
+.profile-options-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.profile-options-list li {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  padding-bottom: 1em;
+  line-height: 0;
+}
+
+.profile-options-list li:last-child {
+  padding-bottom: 0;
+}
+
+.profile-options:not(.options--active) {
+  display: none;
+}
+
+.options {
+  display: none;
+}
+
+
+/* Estilos para el botón de menú */
+.burger-button {
+  display: none;
+}
+
+#logo_desktop {
+  display: block;
+}
+
+#logo_mobile {
+  display: none;
+}
+
+.login_account_image {
+  display: none;
+}
+
+#myLinks {
+  display: none;
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .header {
+    position: relative;
+    height: 150px;
+    display: block;
+    align-items: center;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    background-image: none;
+  }
+
+  /* Navbar para desktops no se verá a priori */
+  .navbar {
+    display: none;
+  }
+
+  #logo_desktop {
+    display: none;
+  }
+
+  .header_login_button {
+    display: none;
+  }
+
+  /* Elementos del navbar para móviles */
+  .burger-button {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  #logo_mobile {
+    display: block;
+    margin: 10px;
+    height: auto;
+    max-height: 250px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .login_account_image {
+    display: block;
+    width: 50px; /* Ajusta el ancho de la imagen */
+    height: 50px; /* Ajusta la altura de la imagen */
+  }
+
+  /* Opciones para visualizar correctamente el navbar para móviles */
+  .mobile-navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: relative;
+  }
+
+  #myLinks {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    background-color: white;
+    z-index: 999;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  #myLinks a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    width: 100%;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .header {
+    position: relative;
+    height: 150px;
+    display: block;
+    align-items: center;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    background-image: none;
+  }
+
+  /* Navbar para desktops no se verá a priori */
+  .navbar {
+    display: none;
+  }
+
+  /* Header con login */
+  .header_profile_button,
+  #option-container {
+    display: none;
+  }
+
+  #logo_desktop {
+    display: none;
+  }
+
+  .header_login_button {
+    display: none;
+  }
+
+  /* Elementos del navbar para móviles */
+  .burger-button {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  #logo_mobile {
+    display: block;
+    margin: 10px;
+    height: auto;
+    max-height: 250px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .login_account_image {
+    display: block;
+    width: 50px; /* Ajusta el ancho de la imagen */
+    height: 50px; /* Ajusta la altura de la imagen */
+  }
+
+  /* Opciones para visualizar correctamente el navbar para móviles */
+  .mobile-navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: relative;
+  }
+
+  #myLinks {
+    display: none;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    background-color: white;
+    z-index: 9999;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  #myLinks a {
+    color: black;
+    padding: 30px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    width: 100%;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+}

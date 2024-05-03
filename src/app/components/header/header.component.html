@@ -1,0 +1,43 @@
+<header class="header">
+  <!-- Top Navigation Menu -->
+  <div class="mobile-navbar">
+    <!-- Burger button -->
+    <div id="burger-button" class="burger-button" (click)="toggleMenu()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <i class="fa fa-bars"></i>
+    </div>
+    <img (click)="irAPaginaDeInicio('homepage')" ngSrc="../../assets/images/logoFooterLetras.png" alt="Courtlink© Logo" class="header_logo" id="logo_mobile" height="1080" width="1080">
+    <a href="#">
+      <img ngSrc="../../assets/images/user-icon.jpg" alt="Login" class="login_account_image" height="1920" width="1920">
+    </a>
+  </div>
+
+  <!-- Links adaptados para el header móvil -->
+  <div id="myLinks">
+    <a routerLink="">Inicio</a>
+    <a routerLink="/canchas">Canchas</a>
+    <a routerLink="/partidos">Partidos</a>
+    <a routerLink="/mvps">MVPs</a>
+    <a routerLink="/nosotros">Nosotros</a>
+  </div>
+
+  <!-- Logo -->
+  <img (click)="irAPaginaDeInicio('homepage')" ngSrc="../../assets/images/logoWebPrincipal.png" alt="Courtlink© Logo" class="header_logo" id="logo_desktop"
+       height="140" width="140">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <a routerLink="" class="header_nav_button">INICIO</a>
+    <a routerLink="/partidos" class="header_nav_button">PARTIDOS</a>
+    <a routerLink="/canchas" class="header_nav_button">CANCHAS</a>
+    <a routerLink="/mvps" class="header_nav_button">MVPs</a>
+    <a routerLink="/nosotros" class="header_nav_button">NOSOTROS</a>
+  </nav>
+
+  <!-- Login button -->
+  <button class="header_login_button" (click)="irAPaginaDeInicio('login')">Iniciar
+    sesión
+  </button>
+</header>

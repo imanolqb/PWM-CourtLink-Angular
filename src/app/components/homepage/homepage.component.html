@@ -1,0 +1,30 @@
+<main>
+  <section id="video-section">
+    <video autoplay loop muted id="video-background">
+      <source src="../../../assets/images/video_homepage.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <article class="left">
+      <h1 class="body-lema">Una nueva manera de entender el baloncesto<span>&#160;</span></h1>
+      <div class="enlaces">
+        <a id="registrate" routerLink="/register">Registrate</a>
+        <a id="quienes_somos" routerLink="/nosotros">Quiénes somos</a>
+      </div>
+    </article>
+    <article class="right">
+      <h1>Encuentra basketlovers a tu alrededor</h1>
+      <form class="homepage-form" (ngSubmit)="onSubmit()" action="../partidos/partidos_page.html">
+        <input type="number" placeholder="Código postal" min="35000" max="38917">
+        <select id="opciones">
+          <option value="1vs1">1 vs 1</option>
+          <option value="2vs2">2 vs 2</option>
+          <option value="3vs3">3 vs 3</option>
+          <option value="4vs4">4 vs 4</option>
+          <option value="5vs5">5 vs 5</option>
+        </select>
+        <input type="datetime-local" id="fecha" [min]="currentDate" required>
+        <input type="submit" value="Buscar">
+      </form>
+    </article>
+  </section>
+</main>

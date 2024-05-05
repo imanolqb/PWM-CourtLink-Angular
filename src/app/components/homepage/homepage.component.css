@@ -201,3 +201,13 @@ h1 {
   from { width: 90% }
   to { width:0 }
 }
+
+.error-container {
+  display: flex;
+  align-items: center;
+}
+
+.error-icon {
+  margin-right: 5px;
+  color: red;
+}

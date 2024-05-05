@@ -2,9 +2,9 @@
   <div class="logo-mobile-container">
     <span class="slogan-mobile">Únete ya al Dream Team de jugadores que se han ligado a nuestra plataforma</span>
   </div>
-  <img alt="image" src="../../../assets/images/logoLogin.png" class="logo-login"/>
+  <img alt="image" ngSrc="../../../assets/images/logoLogin.png" class="logo-login" height="900" width="1600"/>
   <p class="slogan">Únete ya al <strong>Dream Team</strong> de jugadores<br>que se han ligado a nuestra plataforma</p>
-  <form class="register-page-form" action="../homepage/homepage.html" (ngSubmit)="loginUser()">
+  <form class="register-page-form" #form="ngForm" (ngSubmit)="routeToHomepage(form)" novalidate>
     <span class="register-text">REGÍSTRATE</span>
     <div class="register-page-inputs">
       <label>
@@ -14,6 +14,8 @@
           class="register-page-nameinput input"
           name="nombre"
           required
+          [(ngModel)]="nombre"
+          #nombreField="ngModel"
         />
       </label>
       <label>
@@ -23,6 +25,8 @@
           class="register-page-surnameinput input"
           name="apellido"
           required
+          [(ngModel)]="apellido"
+          #apellidoField="ngModel"
         />
       </label>
       <label>
@@ -33,6 +37,8 @@
           name="email"
           id="email"
           required
+          [(ngModel)]="correo"
+          #correoField="ngModel"
         />
       </label>
       <label>
@@ -43,25 +49,22 @@
           name="password"
           id="password"
           required
+          [(ngModel)]="passwd"
+          #passwdField="ngModel"
         />
       </label>
       <div class="island_and_place">
         <label>
           Isla:
-          <select (change)="updateMunicipalities()" id="island" class="register-page-islandinput input" name="isla">
-            <option value="isla1">Gran Canaria</option>
-            <option value="isla2">Tenerife</option>
-            <option value="isla3">La Palma</option>
-            <option value="isla4">Fuerteventura</option>
-            <option value="isla5">El Hierro</option>
-            <option value="isla6">La Gomera</option>
-            <option value="isla7">Lanzarote</option>
-            <option value="isla8">La Graciosa</option>
+          <select (change)="updateMunicipalities()" [(ngModel)]="selectedIsland" id="island" class="register-page-islandinput input" name="isla">
+            <option *ngFor="let island of islands" [value]="island.value">{{ island.label }}</option>
           </select>
         </label>
         <label>
           Municipio:
-          <select id="municipality" class="register-page-placedinput input" name="municipio"></select>
+          <select [(ngModel)]="selectedMunicipality" id="municipality" class="register-page-placedinput input" name="municipio">
+            <option *ngFor="let municipality of municipalitiesByIsland[selectedIsland]" [value]="municipality">{{ municipality }}</option>
+          </select>
         </label>
       </div>
       <div class="height_and_position">
@@ -93,9 +96,9 @@
         <input type="checkbox" id="terms-checkbox" class="terms-checkbox" required>
         <label for="terms-checkbox" class="terms-label">He leído y acepto los <a routerLink="/">términos y condiciones</a></label>
       </div>
-      <input type="submit" class="register-button button" value="SIGN UP">
+      <input type="submit" class="register-button button" value="SIGN UP" [disabled]="!form.valid">
       <span class="register-question">¿Tienes cuenta?</span>
-      <a href="login_page.html" class="register-page-navlink">Inicia sesión</a>
+      <a routerLink="/login" class="register-page-navlink">Inicia sesión</a>
     </div>
   </form>
 </main>

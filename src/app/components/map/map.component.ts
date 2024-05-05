@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, PLATFORM_ID, Inject, Output, EventEmitter } from '@angular/core';
+import {Component, AfterViewInit, PLATFORM_ID, Inject, Output, EventEmitter, Input} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -8,6 +8,8 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements AfterViewInit {
+  @Input() locations: any[] = [];
+
   map: any; // Referencia al objeto de mapa
   marker: any; // Referencia al objeto de marcador
 
@@ -38,6 +40,10 @@ export class MapComponent implements AfterViewInit {
     });
 
     tiles.addTo(this.map);
+
+    this.locations.forEach(location => {
+      L.marker(location).addTo(this.map);
+    });
 
     // Añadir el marcador inicial
     this.marker = L.marker([28.0, -15.6]).addTo(this.map);
